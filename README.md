@@ -7,7 +7,7 @@ Designed to help you calm your mind, reduce stress, improve sleep, and reconnect
 
 ## 🌐 **Live Demo**
 
-🔗 [View the live website](https://your-live-link.com)  
+🔗 [View the live website](https://mindfulness-website-bynikita.netlify.app/)  
 
 
 ---
