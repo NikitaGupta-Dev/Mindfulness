@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sleep Tabs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .tab-btn {
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #ddd;
+    }
+
+    .tab-btn.active {
+      background-color: navy;
+      color: white;
+      font-weight: bold;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    img {
+      width: 200px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="tab1">Sleep Stories</button>
+    <button class="tab-btn" data-tab="tab2">Sleep Meditations</button>
+  </div>
+
+  <div id="tab1" class="tab-content active">
+    <h2>Bedtime stories for grownups</h2>
+    <p>Sleep Stories will guide you off to sleep quickly and naturally...</p>
+    <img src="https://via.placeholder.com/200x250?text=Harry+Styles" alt="Sleep Stories">
+  </div>
+
+  <div id="tab2" class="tab-content">
+    <h2>Guided Sleep Meditations</h2>
+    <p>Relax your mind with gentle guided meditations for better sleep...</p>
+    <img src="https://via.placeholder.com/200x250?text=Meditation" alt="Meditation">
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.tab-btn');
+    const contents = document.querySelectorAll('.tab-content');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all
+        buttons.forEach(btn => btn.classList.remove('active'));
+        contents.forEach(content => content.classList.remove('active'));
+
+        // Add active to current
+        button.classList.add('active');
+        document.getElementById(button.getAttribute('data-tab')).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
