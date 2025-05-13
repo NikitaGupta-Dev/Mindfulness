@@ -144,7 +144,7 @@ cursor: pointer;
   }
   
   .plan {
-    background-image: linear-gradient(rgba(219, 205, 205, 0.4), transparent), url("images,video/Stress bg.webp");
+    background-image: linear-gradient(rgba(219, 205, 205, 0.4)), url("images,video/Stress bg.webp");
     background-size: cover;
     background-position: center;
     width: 100vw;
